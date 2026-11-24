@@ -1,9 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChirpController;
 
-Route::get('/', function () {
-    return view('home');
-});
-
-//when someone visits the page we show them the welcome page
+Route::get('/', [ChirpController::class, 'index']);
